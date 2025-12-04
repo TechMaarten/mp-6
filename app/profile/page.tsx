@@ -1,4 +1,6 @@
-export default function ProfilePage({ searchParams }: { searchParams: any }) {
+export const dynamic = "force-dynamic";
+
+export default function ProfilePage({ searchParams }: { searchParams: Record<string, string> }) {
   const login = searchParams.login;
   const avatar = searchParams.avatar;
   const url = searchParams.url;
