@@ -1,17 +1,11 @@
-"use client";
-import { useSearchParams } from "next/navigation";
-
-export default function Profile() {
-  //Read query parameters passed from callback route
-  const params = useSearchParams();
-  const login = params.get("login");
-  const avatar = params.get("avatar");
-  const url = params.get("url");
-  const repos = params.get("repos");
-  const followers = params.get("followers");
+export default function ProfilePage({ searchParams }: { searchParams: any }) {
+  const login = searchParams.login;
+  const avatar = searchParams.avatar;
+  const url = searchParams.url;
+  const repos = searchParams.repos;
+  const followers = searchParams.followers;
 
   return (
-    //Centered card with gradient background
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <div className="bg-white shadow-xl rounded-xl p-10 w-full max-w-md text-center">
         {/* User avatar */}
