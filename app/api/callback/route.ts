@@ -28,6 +28,9 @@ export async function GET(req: Request) {
   });
   const user = await userRes.json();
 
+  console.log("Token data:", tokenData);
+  console.log("User data:", user);
+  
   //Redirect to profile page with user data in query params
   return NextResponse.redirect(
     new URL(
